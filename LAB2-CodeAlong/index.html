@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="text">
+    <button id="myButton">Add text</button>
+    <p id="textArea"></p>
+    
+</body>
+<script>
+    const myButton = document.getElementById('myButton'); //Now we can access every single object in the html file
+    const textArea = document.getElementById("textArea");
+    const textInput = document.querySelector('input');
+
+    console.log("I've Been Clicked!") //This is for debugging
+
+    myButton.addEventListener("click", function() {
+        // alert("The Button has been clicked!");
+        console.log(myButton)
+        let value = textInput.value
+        textArea.innerText = value
+    })
+</script>
+</html>
